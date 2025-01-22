@@ -11,39 +11,40 @@ import GithubIcon from "@/assets/icons/github.svg";
 import TypescriptIcon from "@/assets/icons/typescript.svg";
 import MySQLIcon from "@/assets/icons/sql-database.svg";
 import TailwindIcon from "@/assets/icons/tailwind.svg";
+import { TechIcon } from "@/components/TechIcon";
 
 const toolboxItems = [
   {
     title: "Javascript",
-    icon: <JavascriptIcon />,
+    iconType: JavascriptIcon,
   },
   {
     title: "HTML5",
-    icon: <HTMLIcon />,
+    iconType: HTMLIcon,
   },
   {
     title: "CSS3",
-    icon: <CSSIcon />,
+    iconType: CSSIcon,
   },
   {
     title: "React",
-    icon: <ReactIcon />,
+    iconType: ReactIcon,
   },
   {
     title: "Github",
-    icon: <GithubIcon />,
+    iconType: GithubIcon,
   },
   {
     title: "Typescript",
-    icon: <TypescriptIcon />,
+    iconType: TypescriptIcon,
   },
   {
     title: "MySQL",
-    icon: <MySQLIcon />,
+    iconType: MySQLIcon,
   },
   {
     title: "TailwindCSS",
-    icon: <TailwindIcon />,
+    iconType: TailwindIcon,
   },
 ];
 
@@ -80,7 +81,7 @@ export const AboutSection = () => {
           <div>
             {toolboxItems.map((item) => (
               <div key={item.title}>
-                <span>{item.icon}</span>
+                <TechIcon component={item.iconType} />
                 <span>{item.title}</span>
               </div>
             ))}
