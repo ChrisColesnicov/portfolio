@@ -12,6 +12,8 @@ import TypescriptIcon from "@/assets/icons/typescript.svg";
 import MySQLIcon from "@/assets/icons/sql-database.svg";
 import TailwindIcon from "@/assets/icons/tailwind.svg";
 import { TechIcon } from "@/components/TechIcon";
+import mapImage from "@/assets/images/map.png";
+import smileMemoji from "@/assets/images/memoji-smile.png";
 
 const toolboxItems = [
   {
@@ -48,6 +50,37 @@ const toolboxItems = [
   },
 ];
 
+const hobbies = [
+  {
+    title: "Gaming",
+    emoji: "🎮",
+  },
+  {
+    title: "Cars",
+    emoji: "🚗",
+  },
+  {
+    title: "Travel",
+    emoji: "🌍",
+  },
+  {
+    title: "Tech",
+    emoji: "📱",
+  },
+  {
+    title: "Cooking",
+    emoji: "🍳",
+  },
+  {
+    title: "Food",
+    emoji: "🌮",
+  },
+  {
+    title: "Music",
+    emoji: "🎧",
+  },
+];
+
 export const AboutSection = () => {
   return (
     <div className="pb-96">
@@ -66,7 +99,7 @@ export const AboutSection = () => {
           <Image
             src={topPicksCover.src}
             width={200}
-            height={400}
+            height={200}
             alt="The Witcher Cover"
           />
         </Card>
@@ -86,6 +119,30 @@ export const AboutSection = () => {
               </div>
             ))}
           </div>
+        </Card>
+        <Card>
+          <div>
+            <StarIcon />
+            <h3>Beyond the Code</h3>
+            <p>Explore my interests and hobbies beyond the coding ground.</p>
+          </div>
+          <div>
+            {hobbies.map((hobby) => (
+              <div key={hobby.title}>
+                <span>{hobby.title}</span>
+                <span>{hobby.emoji}</span>
+              </div>
+            ))}
+          </div>
+        </Card>
+        <Card>
+          <Image src={mapImage.src} alt="Local map" width={200} height={200} />
+          <Image
+            src={smileMemoji.src}
+            alt="smile memoji"
+            width={200}
+            height={200}
+          />
         </Card>
       </div>
     </div>
