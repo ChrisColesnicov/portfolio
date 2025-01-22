@@ -14,6 +14,8 @@ import TailwindIcon from "@/assets/icons/tailwind.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
+import { CardHeader } from "@/components/CardHeader";
+import { ToolboxItems } from "@/components/ToolboxItems";
 
 const toolboxItems = [
   {
@@ -83,67 +85,68 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-    <div className="pb-96">
-      <SectionHeader
-        eyebrow="About Me"
-        title="Meet Your Developer"
-        description="Find out who I am, what I create, and what I love. "
-      />
-      <div>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>My Top Picks</h3>
-            <p>Books, Games, and more I enjoy.</p>
-          </div>
-          <Image
-            src={topPicksCover.src}
-            width={200}
-            height={200}
-            alt="The Witcher Cover"
-          />
-        </Card>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>My Toolbox</h3>
-            <p>
-              Take a look at the technologies and tools I use to create my work.
-            </p>
-          </div>
-          <div>
-            {toolboxItems.map((item) => (
-              <div key={item.title}>
-                <TechIcon component={item.iconType} />
-                <span>{item.title}</span>
-              </div>
-            ))}
-          </div>
-        </Card>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>Beyond the Code</h3>
-            <p>Explore my interests and hobbies beyond the coding ground.</p>
-          </div>
-          <div>
-            {hobbies.map((hobby) => (
-              <div key={hobby.title}>
-                <span>{hobby.title}</span>
-                <span>{hobby.emoji}</span>
-              </div>
-            ))}
-          </div>
-        </Card>
-        <Card>
-          <Image src={mapImage.src} alt="Local map" width={200} height={200} />
-          <Image
-            src={smileMemoji.src}
-            alt="smile memoji"
-            width={200}
-            height={200}
-          />
-        </Card>
+    <div className="py-16">
+      <div className="container">
+        <SectionHeader
+          eyebrow="About Me"
+          title="Meet Your Developer"
+          description="Find out who I am, what I create, and what I love. "
+        />
+        <div className="mt-16">
+          <Card className="h-[320px]">
+            <CardHeader
+              title="My Top Picks"
+              description="Books, Games, Franchises (and more) I enjoy."
+            />
+            <div className="w-50 mx-auto mt-6">
+              <Image
+                src={topPicksCover.src}
+                width={400}
+                height={400}
+                alt="The Witcher Cover"
+                className="size-50 rounded-3xl"
+              />
+            </div>
+          </Card>
+          <Card>
+            <div>
+              <CardHeader
+                title="My Toolbox"
+                description="Take a look at the technologies and tools I use to create my
+                work."
+              />
+            </div>
+            <ToolboxItems items={toolboxItems} />
+          </Card>
+          <Card>
+            <CardHeader
+              title="Beyond the Code"
+              description="Explore my interests and hobbies beyond the coding ground."
+            />
+            <div>
+              {hobbies.map((hobby) => (
+                <div key={hobby.title}>
+                  <span>{hobby.title}</span>
+                  <span>{hobby.emoji}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+          <Card>
+            <Image
+              src={mapImage.src}
+              alt="Local map"
+              width={200}
+              height={200}
+            />
+            <Image
+              src={smileMemoji.src}
+              alt="smile memoji"
+              width={200}
+              height={200}
+            />
+          </Card>
+        </div>
       </div>
     </div>
   );
