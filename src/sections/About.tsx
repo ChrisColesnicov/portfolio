@@ -160,19 +160,23 @@ export const AboutSection = () => {
               ))}
             </div>
           </Card>
-          <Card>
+          <Card className="h-[320px] p-0 relative">
             <Image
               src={mapImage.src}
               alt="Local map"
-              width={200}
-              height={200}
+              width={320}
+              height={320}
+              className="h-full w-full object-cover"
             />
-            <Image
-              src={smileMemoji.src}
-              alt="smile memoji"
-              width={200}
-              height={200}
-            />
+            <div className="absolute top-1/2 left-1/2 -translate-x-3/4 -translate-y-1/6 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+              <Image
+                src={smileMemoji.src}
+                alt="Smiling memoji"
+                width={200}
+                height={200}
+                className="size-20"
+              />
+            </div>
           </Card>
         </div>
       </div>
