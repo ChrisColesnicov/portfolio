@@ -92,7 +92,7 @@ export const AboutSection = () => {
           title="Meet Your Developer"
           description="Find out who I am, what I create, and what I love. "
         />
-        <div className="mt-16">
+        <div className="mt-16 flex flex-col gap-8">
           <Card className="h-[320px]">
             <CardHeader
               title="My Top Picks"
@@ -116,7 +116,7 @@ export const AboutSection = () => {
               className="px-6 pt-6"
             />
             <ToolboxItems items={toolboxItems} className="" />
-            <ToolboxItems items={toolboxItems} className="flex-row-reverse" />
+            <ToolboxItems items={toolboxItems} className="" itemsWrapperClassName="-translate-x-1/2"/>
           </Card>
           <Card>
             <CardHeader
