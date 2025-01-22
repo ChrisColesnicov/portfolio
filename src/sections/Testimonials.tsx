@@ -43,14 +43,14 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <div className="py-16">
+    <div className="py-16 lg:py-24">
       <div className="container">
         <SectionHeader
           eyebrow="Happy (future) Clients"
           title="What Clients (Will) Say About Me"
           description="This could be your review here—let’s make it happen!"
         />
-        <div className="mt-16 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="mt-16 lg:mt-24 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="flex flex-none gap-8">
             {testimonials.map((testimonial) => (
               <Card key={testimonial.name} className="max-w-xs md:max-w-md md:p-8">
