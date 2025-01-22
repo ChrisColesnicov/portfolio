@@ -56,30 +56,44 @@ const hobbies = [
   {
     title: "Gaming",
     emoji: "🎮",
+    left: "5%",
+    top: "5%",
   },
   {
     title: "Cars",
     emoji: "🚗",
+    left: "50%",
+    top: "5%",
   },
   {
     title: "Travel",
     emoji: "🌍",
+    left: "10%",
+    top: "35%",
   },
   {
     title: "Tech",
     emoji: "📱",
+    left: "70%",
+    top: "30%",
   },
   {
     title: "Cooking",
     emoji: "🍳",
+    left: "35%",
+    top: "40%",
   },
   {
     title: "Food",
     emoji: "🌮",
+    left: "8%",
+    top: "70%",
   },
   {
     title: "Music",
     emoji: "🎧",
+    left: "50%",
+    top: "75%",
   },
 ];
 
@@ -116,17 +130,31 @@ export const AboutSection = () => {
               className="px-6 pt-6"
             />
             <ToolboxItems items={toolboxItems} className="" />
-            <ToolboxItems items={toolboxItems} className="" itemsWrapperClassName="-translate-x-1/2"/>
+            <ToolboxItems
+              items={toolboxItems}
+              className=""
+              itemsWrapperClassName="-translate-x-1/2"
+            />
           </Card>
-          <Card>
+          <Card className="h-[320px] p-0 flex flex-col">
             <CardHeader
               title="Beyond the Code"
               description="Explore my interests and hobbies beyond the coding ground."
+              className="px-6 py-6"
             />
-            <div>
+            <div className="relative flex-1">
               {hobbies.map((hobby) => (
-                <div key={hobby.title}>
-                  <span>{hobby.title}</span>
+                <div
+                  key={hobby.title}
+                  className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                  style={{
+                    left: hobby.left,
+                    top: hobby.top,
+                  }}
+                >
+                  <span className="font-medium text-gray-950">
+                    {hobby.title}
+                  </span>
                   <span>{hobby.emoji}</span>
                 </div>
               ))}
