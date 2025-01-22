@@ -107,77 +107,81 @@ export const AboutSection = () => {
           description="Find out who I am, what I create, and what I love. "
         />
         <div className="mt-16 flex flex-col gap-8">
-          <Card className="h-[320px]">
-            <CardHeader
-              title="My Top Picks"
-              description="Books, Games, Franchises (and more) I enjoy."
-            />
-            <div className="w-50 mx-auto mt-6">
-              <Image
-                src={topPicksCover.src}
-                width={400}
-                height={400}
-                alt="The Witcher Cover"
-                className="size-50 rounded-3xl"
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 ">
+            <Card className="h-[320px] col-span-1 md:col-span-2">
+              <CardHeader
+                title="My Top Picks"
+                description="Books, Games (and more) I enjoy."
               />
-            </div>
-          </Card>
-          <Card className="h-[320px] pt-0 px-0">
-            <CardHeader
-              title="My Toolbox"
-              description="Take a look at the technologies and tools I use to create my
+              <div className="mx-auto px-6 mt-0">
+                <Image
+                  src={topPicksCover.src}
+                  width={800}
+                  height={400}
+                  alt="The Witcher Cover"
+                  className="w-full mx-auto rounded-tl-xl rounded-tr-xl mt-8 md:mt-6"
+                />
+              </div>
+            </Card>
+            <Card className="h-[320px] col-span-1 md:col-span-3">
+              <CardHeader
+                title="My Toolbox"
+                description="Take a look at the technologies and tools I use to create my
                 work."
-              className="px-6 pt-6"
-            />
-            <ToolboxItems items={toolboxItems} className="" />
-            <ToolboxItems
-              items={toolboxItems}
-              className=""
-              itemsWrapperClassName="-translate-x-1/2"
-            />
-          </Card>
-          <Card className="h-[320px] p-0 flex flex-col">
-            <CardHeader
-              title="Beyond the Code"
-              description="Explore my interests and hobbies beyond the coding ground."
-              className="px-6 py-6"
-            />
-            <div className="relative flex-1">
-              {hobbies.map((hobby) => (
-                <div
-                  key={hobby.title}
-                  className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
-                  style={{
-                    left: hobby.left,
-                    top: hobby.top,
-                  }}
-                >
-                  <span className="font-medium text-gray-950">
-                    {hobby.title}
-                  </span>
-                  <span>{hobby.emoji}</span>
-                </div>
-              ))}
-            </div>
-          </Card>
-          <Card className="h-[320px] p-0 relative">
-            <Image
-              src={mapImage.src}
-              alt="Local map"
-              width={320}
-              height={320}
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute top-1/2 left-1/2 -translate-x-3/4 -translate-y-1/6 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
-              <Image
-                src={smileMemoji.src}
-                alt="Smiling memoji"
-                width={200}
-                height={200}
-                className="size-20"
+                className=""
               />
-            </div>
-          </Card>
+              <ToolboxItems items={toolboxItems} className="" />
+              <ToolboxItems
+                items={toolboxItems}
+                className="mt-4"
+                itemsWrapperClassName="-translate-x-1/2"
+              />
+            </Card>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
+            <Card className="h-[320px] p-0 flex flex-col col-span-1 md:col-span-3">
+              <CardHeader
+                title="Beyond the Code"
+                description="Explore my interests and hobbies beyond the coding ground."
+                className="px-6 py-6"
+              />
+              <div className="relative flex-1">
+                {hobbies.map((hobby) => (
+                  <div
+                    key={hobby.title}
+                    className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                    style={{
+                      left: hobby.left,
+                      top: hobby.top,
+                    }}
+                  >
+                    <span className="font-medium text-gray-950">
+                      {hobby.title}
+                    </span>
+                    <span>{hobby.emoji}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
+            <Card className="h-[320px] p-0 relative col-span-1 md:col-span-2">
+              <Image
+                src={mapImage.src}
+                alt="Local map"
+                width={320}
+                height={320}
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute top-1/2 left-1/2 -translate-x-3/4 -translate-y-1/6 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+                <Image
+                  src={smileMemoji.src}
+                  alt="Smiling memoji"
+                  width={128}
+                  height={128}
+                  className="size-20"
+                />
+              </div>
+            </Card>
+          </div>
         </div>
       </div>
     </div>
