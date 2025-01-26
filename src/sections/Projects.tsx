@@ -49,7 +49,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section id="projects" className="pb-16 lg:py-24">
       <div className="container">
         <SectionHeader
           eyebrow="Real-world Results"
@@ -89,7 +89,7 @@ export const ProjectsSection = () => {
                   </ul>
                   <a href={project.link}>
                     <button className="bg-white/50 text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>Available soon</span>
+                      <span>Demo Available Soon</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>
                   </a>
