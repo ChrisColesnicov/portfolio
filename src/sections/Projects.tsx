@@ -16,7 +16,7 @@ const portfolioProjects = [
     results: [
       { title: "User-friendly interface with responsive design" },
       { title: "All-in-one search feature" },
-      { title: "Administrator access available to manage content" },
+      { title: "Administrator access to manage content" },
     ],
     link: "#",
     image: youflimLanding,
@@ -57,10 +57,13 @@ export const ProjectsSection = () => {
           description="Take a look at some of my previous projects and apps !"
         />
         <div className="flex flex-col mt-10 md:mt-20 gap-12">
-          {portfolioProjects.map((project) => (
+          {portfolioProjects.map((project, projectIndex) => (
             <Card
               key={project.title}
-              className="px-8 pb-0 md:px-10 pt-8 md:pt-12 lg:pt-16 lg:px-20 min-h-[20rem] md:min-h-[25rem]"
+              className="px-8 pb-0 md:px-10 pt-8 md:pt-12 lg:pt-16 lg:px-20 min-h-[20rem] md:min-h-[25rem] sticky"
+              style={{
+                top: `calc(64px + ${projectIndex} * 40px`,
+              }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
