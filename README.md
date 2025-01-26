@@ -4,6 +4,7 @@ A personal portfolio built with Next.js and Tailwind CSS, showcasing my web deve
 
 ## Description
 This is a personal portfolio built using Next.js and Tailwind CSS. It features a clean, responsive design that highlights my web development projects, skills, and experience. You can view my work, contact me, and get in touch through email directly from the site.
+Check the deployment section on the side of this repo to have a look at the final result ! (thanks Vercel !)
 
 ## Features
 - Responsive design
@@ -18,7 +19,7 @@ This is a personal portfolio built using Next.js and Tailwind CSS. It features a
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/username/project-name.git
+    git clone https://github.com/ChrisColesnicov/portfolio.git
     ```
 2. Navigate to the project directory:
     ```bash
