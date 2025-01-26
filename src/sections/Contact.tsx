@@ -24,8 +24,9 @@ export const ContactSection = () => {
               </p>
             </div>
             <a
-              href="mailto:#"
+              href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
               className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900"
+              aria-label="Open mail client"
             >
               <span className="font-semibold">Get In Touch</span>
               <ArrowUpRightIcon className="size-4" />
