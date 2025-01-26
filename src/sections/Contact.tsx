@@ -19,15 +19,17 @@ export const ContactSection = () => {
               </h2>
               <p className="text-sm md:text-base mt-2">
                 Got a project in mind? Let’s connect and see how we can bring
-                your vision to life and help you reach your goals.
+                your vision to life and help you reach your goals. <br /> Not
+                decided yet ? Take a look at my resume first !
               </p>
             </div>
-            <div>
-              <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
-                <span className="font-semibold">Get In Touch</span>
-                <ArrowUpRightIcon className="size-4" />
-              </button>
-            </div>
+            <a
+              href="mailto:#"
+              className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900"
+            >
+              <span className="font-semibold">Get In Touch</span>
+              <ArrowUpRightIcon className="size-4" />
+            </a>
           </div>
         </div>
       </div>
