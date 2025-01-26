@@ -1,5 +1,6 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import { SectionHeader } from "@/components/SectionHeader";
 
 export const ContactSection = () => {
   return (
@@ -25,11 +26,11 @@ export const ContactSection = () => {
             </div>
             <a
               href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
-              className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900"
+              className="text-white bg-gray-900 inline-flex items-center px-6 md:px-8 h-12 rounded-xl gap-2 w-max border border-gray-900 md:text-lg text-nowrap"
               aria-label="Open mail client"
             >
               <span className="font-semibold">Get In Touch</span>
-              <ArrowUpRightIcon className="size-4" />
+              <ArrowUpRightIcon className="size-4 md:size-5 lg:size-6" />
             </a>
           </div>
         </div>
